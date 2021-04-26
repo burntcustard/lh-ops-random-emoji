@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "main": "node index.js"
+    "start": "node index.js"
   },
   "author": "John Evans <dev@wearelighthouse.com>",
   "repository": {
