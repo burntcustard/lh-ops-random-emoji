@@ -15,14 +15,14 @@ async function printRandomEmojiFormula() {
   const randomEmojiFormula = [...emojis].reduce((accumulator, emoji, index) => `${accumulator}, ${index}, "${emoji}"`, 'SWITCH({Random Number}') + ')';
   console.log(`\n${randomEmojiFormula}\n`);
   clipboardy.writeSync(randomEmojiFormula);
-  console.log(' - copied to clipboard!');
+  console.log(' - Copied to clipboard!');
 }
 
 async function printRandomNumberFormula() {
   const randomNumberFormula = `MOD(VALUE(DATETIME_FORMAT(NOW(), 'D')) + Autonumber, ${[...emojis].length})`;
   console.log(`\n${randomNumberFormula}\n`);
   clipboardy.writeSync(randomNumberFormula);
-  console.log(' - copied to clipboard!');
+  console.log(' - Copied to clipboard!');
 }
 
 async function removeEmoji() {
@@ -35,20 +35,28 @@ async function removeEmoji() {
       loop: false,
     }])
     .then(answers => {
+      const removedEmoji = [...emojis][answers.list];
       emojis = [...emojis].filter((e, i) => i !== answers.list, 1).join('');
       fs.writeFileSync('emojis.md', emojis);
       console.clear();
       printCurrentList();
-      console.log(`(Removed ${[...emojis][answers.list]})`);
+      console.log(` - Removed ${removedEmoji}`);
     });
 }
 
 async function addEmoji() {
-  emojis += clipboardEmoji;
-  fs.writeFileSync('emojis.md', emojis + '\r\n');
   console.clear();
+
+  if (clipboardEmoji.length === 0) {
+    printCurrentList();
+    console.log('No emoji in clipboard, none added.');
+    return;
+  }
+
+  emojis += clipboardEmoji.join('');
   printCurrentList();
-  console.log(`Added ${clipboardEmoji} to the list`);
+  fs.writeFileSync('emojis.md', emojis + '\r\n');
+  console.log(` - Added ${clipboardEmoji} to the list`);
 }
 
 const tools = {
@@ -81,7 +89,7 @@ function main() {
         .then(() => {
           if (answers.menu !== 'Exit') {
             console.log('');
-            pressAnyKey().then(main);
+            pressAnyKey('', { ctrlC: 'reject' }).then(main).catch(error => error);
           }
         });
     })
