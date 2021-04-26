@@ -1,0 +1,20 @@
+{
+  "name": "lh-ops-random-emoji-formula",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "main": "node index.js"
+  },
+  "author": "John Evans <dev@wearelighthouse.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/burntcustard/lh-ops-random-emoji.git"
+  }
+  "license": "MIT",
+  "dependencies": {
+    "clipboardy": "^2.3.0",
+    "emoji-regex": "^9.2.2",
+    "inquirer": "^8.0.0",
+    "press-any-key": "^0.1.1"
+  }
+}
