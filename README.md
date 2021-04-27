@@ -15,7 +15,7 @@ For [Lighthouse's](wearelighthouse.com/) [Airtable](https://airtable.com/) Opera
 2. Install dependencies  
 `$ npm i`
 
-3. Edit [emojis.md](emojis.md) via a text editor, **or** get one or more emojis in your clipboard for the CLI tool to use.
+3. Edit [emojis.md](emojis.md) via a text editor, **or** copy one or more emojis into your clipboard for the CLI tool to use.
 
 4. Start  
 `$ npm start`
