@@ -9,18 +9,18 @@ For [Lighthouse's](wearelighthouse.com/) [Airtable](https://airtable.com/) Opera
 
 ## Usage
 
-1. Clone the repo  
+1. Clone the repo:  
 `$ git clone https://github.com/burntcustard/lh-ops-random-emoji.git`
 
-2. Install dependencies  
+2. Install dependencies:  
 `$ npm i`
 
 3. Edit [emojis.md](emojis.md) via a text editor, **or** copy one or more emojis into your clipboard for the CLI tool to ingest.
 
-4. Start  
+4. Start:  
 `$ npm start`
 
-5. If you're using this repo to store the emoji list, commit  
+5. If you're using this repo to store the emoji list, commit:  
 `$ git commit emojis.md -m "Add 🚀"`
 
 ## Reasoning
