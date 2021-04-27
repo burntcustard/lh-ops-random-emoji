@@ -25,7 +25,7 @@ For [Lighthouse's](wearelighthouse.com/) [Airtable](https://airtable.com/) Opera
 
 ## Reasoning
 
-In JavaScript, you can't easily use string methods for emoji, as they're composed of 1+ code points. E.g. ☠️ is `U+2620` **and** `U+FE0F`.
+In JavaScript, you can't easily use string methods for choosing emoji, as they're composed of one, or sometimes multiple, code points. E.g. ☠️ is `U+2620` **and** `U+FE0F`.
 
 `🐙🦁🐨🐻🐯🦆.charAt(2) // -> 'ud83e'`
 
