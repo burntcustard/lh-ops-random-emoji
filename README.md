@@ -15,9 +15,11 @@ For [Lighthouse's](wearelighthouse.com/) [Airtable](https://airtable.com/) Opera
 2. Install dependencies  
 `$ npm i`
 
-3. Start  
+3. Edit [emojis.md](emojis.md) via a text editor, **or** get one or more emojis in your clipboard for the CLI tool to use.
+
+4. Start  
 `$ npm start`
 
-4. Commit changes  
+5. Commit changes  
 After adding or removing, [emojis.md](emojis.md) should be commited so that the modified list is saved  
 `$ git commit emojis.md -m "Add 🚀"`
