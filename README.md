@@ -1,6 +1,6 @@
 # lh-ops-random-emoji
 
-For [Lighthouse's](wearelighthouse.com/) [Airtable](https://airtable.com/) Operations members table.
+For [Lighthouse's](https://wearelighthouse.com/) [Airtable](https://airtable.com/) Operations members table.
 
 - A place to save the random emoji list.
 - A tool to generate formulas for the **Random Number** and **Random Emoji** columns.
